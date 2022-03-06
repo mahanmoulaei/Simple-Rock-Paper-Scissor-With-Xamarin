@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="input.ActivityIndicator">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <ActivityIndicator IsRunning="True" Color="Orange"/>
+            <ProgressBar Progress="0.2" ProgressColor="Black" x:Name="Bar1"/>
+            <ProgressBar Progress="0.5" ProgressColor="Gold" x:Name="Bar2"/>
+            <ProgressBar Progress="0.8" ProgressColor="Red" x:Name="Bar3"/>
+            <Button Text="Change the bars!" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

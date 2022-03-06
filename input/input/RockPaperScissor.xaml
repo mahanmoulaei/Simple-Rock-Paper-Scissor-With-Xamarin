@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="input.RockPaperScissor">
+    <ContentPage.Content>
+        <Grid  Margin="10" ColumnSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button ImageSource="" Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" x:Name="machineButton" BackgroundColor="Transparent"/>
+
+            <Button ImageSource="stone.png" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" Text="stone"/>
+            <Button ImageSource="paper.png" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" Text="paper"/>
+            <Button ImageSource="scissor.png" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked" Text="scissor"/>
+
+
+
+
+            <StackLayout Grid.Row="3" Grid.ColumnSpan="3">
+                <StackLayout Orientation="Horizontal" Spacing="30"> 
+                    <Label Text="Player: " FontSize="25"/>
+                    <ProgressBar HorizontalOptions="FillAndExpand" ProgressColor="GreenYellow" Progress="0.1" x:Name="playerProgress"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Machine: " FontSize="25"/>
+                    <ProgressBar HorizontalOptions="FillAndExpand" ProgressColor="OrangeRed" Progress="0.1" x:Name="machineProgress"/>
+                </StackLayout>
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
